@@ -3,10 +3,12 @@ import Welcome from './views/welcome/Welcome'
 import Vehicles from './views/vehicles/Vehicles'
 import LeaseOrOwn from './views/vehicles/LeaseOrOwn'
 import Drivers from './views/drivers/Drivers'
-import defaultStep from './resources/default-step'
+import defaultNavigationState from './resources/default-navigation-state'
+import defaultPolicyRequest from './resources/default-policy-request'
 
 function App() {
-  const [step, setStep] = useState(defaultStep)
+  const [navigation, setNavigation] = useState(defaultNavigationState)
+  const [policyRequest, setPolicyRequest] = useState(defaultPolicyRequest)
 
   console.log(step)
 
