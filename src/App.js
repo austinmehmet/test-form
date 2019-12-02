@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import Welcome from './views/welcome/Welcome'
+import Vehicles from './views/vehicles/Vehicles'
+import LeaseOrOwn from './views/vehicles/LeaseOrOwn'
+import Drivers from './views/drivers/Drivers'
+import defaultStep from './resources/default-step'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [step, setStep] = useState(defaultStep)
+
+  console.log(step)
+
+  switch(step.name) {
+    case 'welcome':
+      return (
+      <Welcome setStep={setStep}/>
+      )
+    case 'vehicles':
+      return (
+      <Vehicles setStep={setStep}/>
+      )
+    case 'leaseOrOwn':
+      return (<LeaseOrOwn/>)
+    case 'drivers':
+      return (<Drivers/>)
+  }
+
 }
 
 export default App;
