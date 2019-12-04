@@ -17,7 +17,7 @@ const Vehicles = ({ setStep }) => {
             Vehicles Page<br /><br />
             <label htmlFor="vin">VIN</label>
             <input type="text" name="vin" ref={vinRef}></input> <br />
-            <button onClick={update}>Click me you slut</button>
+            <button onClick={update}>Continue</button>
         </div>
     )
 }
